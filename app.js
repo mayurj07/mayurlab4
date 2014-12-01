@@ -38,7 +38,7 @@
 
 	app.get('/', 
 		function(req,res){
-				client.get("http://mayur-grails-gumball-v2.cfapps.io/gumballs", function(data, response){
+				client.get("http://mayurgrailsapp.cfapps.io/gumballs", function(data, response){
 	            dt['id'] = data[0].id;
 	            dt['countGumballs'] = data[0].countGumballs;
 	            dt['modelNumber'] = data[0].modelNumber;
@@ -110,7 +110,7 @@
 						headers:{"Content-Type": "application/json"},
 	        			data:{countGumballs:cnt}
 	      			};
-					client.put("http://mayur-grails-gumball-v2.cfapps.io/gumballs/1?countGumballs=${countGumballs}", args, function(data, response){});
+					client.put("http://mayurgrailsapp.cfapps.io/gumballs/1?countGumballs=${countGumballs}", args, function(data, response){});
 
 					state='Accepted';
 		            dt['countGumballs'] = count;
